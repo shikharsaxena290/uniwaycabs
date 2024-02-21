@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('bgimage2.jpg') ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+a:hover{
+    color: rgb(241, 222, 8);
+}
+header{
+    position: relative;
+    padding:  0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo{
+    margin-top: 3vh;
+    margin-left: -15vh;
+    margin-right: 20vh;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color:rgb(241, 183, 8) ;
+    color: #fff;
+    padding: 0.5rem 1rem ;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease
+}
+.action_btn:hover{
+    scale:1.05;
+    color: #fff;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0 ;
+    width: 300px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 225px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+section#text{
+    height:calc(100vh - 60px) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+#text p{
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+}
+#text h1{
+    color: rgb(241, 183, 8);
+    font-size: 70px;
+    margin-bottom: 1rem;
+}
+#text h2{
+    font-size: 33px;
+    margin-bottom: 1rem;
+}
+section2{
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color:white;
+}
+.box{
+    height: 90%;
+    width: 80%;
+    background-color: rgb(246, 246, 91);
+    margin: auto;
+    position: relative;
+    top: -50%;
+}
+textarea{
+    border: black;
+    height: 60px;
+    width: 250px;
+    margin-top: 60px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 2vh;
+}
+.text_one{
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+input{
+    height: 60px;
+    width: 250px;
+    margin: auto;
+    border: none;
+    bottom: 9%;
+    position: relative;
+    margin-left: 1rem;
+    font-size: 20px;
+}
+.btn{
+    position: relative;
+    height: 60px;
+    width: 250px;
+    bottom: 9%;
+    margin-left: 2rem;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+section3{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    background-color: #000;
+}
+section3 h1{
+    color: white;
+    display: inline-flex;
+    top: 20%;
+    position: relative;
+    left: 5%;
+    text-transform: capitalize;
+    font-size: 30PX;
+}
+.ag-format-container {
+    width: 1110px;
+    margin: 0 auto;
+  }
+  .ag-courses_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  
+    padding: 50px 0;
+  }
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    flex-basis: calc(33.33333% - 30px);
+  
+    margin: 0 15px 30px;
+  
+    overflow: hidden;
+  
+    border-radius: 28px;
+  }
+  .ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    background-color: #121212;
+  
+    overflow: hidden;
+  
+    position: relative;
+  }
+  .ag-courses-item_link:hover,
+  .ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: #FFF;
+  }
+  .ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+  }
+  .ag-courses-item_title {
+    min-height: 87px;
+    margin: 0 0 15px;
+  
+    overflow: hidden;
+  
+    font-weight: bold;
+    font-size: 25px;
+    color: #FFF;
+  
+    z-index: 2;
+    position: relative;
+  }
+  .ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #f9b234;
+  
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+  
+    border-radius: 50%;
+  
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+    background-color: #3ecd5e;
+  }
+  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+    background-color: #e44002;
+  }
+  .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+    background-color: #952aff;
+  }
+  .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+    background-color: #cd3e94;
+  }
+  .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+    background-color: #4c49ea;
+  }
+section4{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+}
+.download_text{
+    height: 100%;
+    width: 50%;
+    display: block;
+}
+.download_text_text{
+    height: 50%;
+    width: 100%;
+    padding-top: 20vh;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.download_text_text h1{
+    padding-left: 17vh;
+}
+.download_text_text p{
+    padding-top: 1vh;
+    padding-left: 12vh;
+}
+.download_img{
+    height: 100%;
+    width: 50%;
+}
+.download_img img{
+    height: 100%;
+    width: 70%;
+    padding-left: 20vh;
+}
+.download_text_img{
+    height: 50%;
+    width: 100%;
+    padding-left: 20vh;
+}
+.section_5{
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    background-color: #212121;
+}
+.contactus{
+    width: 30%;
+    height: 100%;
+    padding-top: 5vh;
+    padding-left: 15vh;
+}
+.contactus h3{
+    color: white;
+    text-align: left;
+    padding-top: 3vh;
+}
+.contactus2{
+    width: 20%;
+    height: 100%;
+    padding-left: 15vh;
+}
+.contactus2 h3{
+    color: white;
+    padding-top: 10vh;
+    padding-left: 10vh;
+}
+.app_btn{
+    position: relative;
+    top: 10%;
+}
+.contactus3{
+    width: 30%;
+    height: 70%;
+    padding-left: 25vh;
+}
+.contactus3 img{
+    float: right;
+    position: relative;
+    top: 50%;
+}
+section6{
+    height: 2vh;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+}
+.mail{
+    background-color: #000;
+}
+section6 h4{
+    color: white;
+}
+  @media only screen and (max-width: 979px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+    }
+    .ag-courses-item_title {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .ag-format-container {
+      width: 96%;
+    }
+  
+  }
+  @media only screen and (max-width: 639px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+    .ag-courses-item_title {
+      min-height: 72px;
+      line-height: 1;
+  
+      font-size: 24px;
+    }
+    .ag-courses-item_link {
+      padding: 22px 40px;
+    }
+    .ag-courses-item_date-box {
+      font-size: 16px;
+    }
+  }
+@media screen and (max-width: 1549px) {
+    .navbar .logo{
+        margin-top: 3vh;
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }
+
+@media screen and (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+      display: none;
+    }
+    body{
+        background-size:100% 90% ;
+    }
+    .navbar .toggle_btn{
+        display: block;
+        color: white;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+    #text{
+        position: relative;
+        top: -20%;
+    }
+    #text h1{
+        font-size: 40px;
+    }
+    #text p{
+        display: none;
+    }
+    #text h2{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .navbar .logo .img{
+        height: 40px;
+        width: 140px;
+    }
+    .dropdown_menu{
+       left: 2rem; 
+       width: unset;
+    }
+} 
+
+  @media screen and (max-width: 430px) {
+    body{
+        background-size:100% 70% ;
+    }
+  }
